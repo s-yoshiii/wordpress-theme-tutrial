@@ -4,7 +4,7 @@ add_action('init', function () {
   add_theme_support('post-thumbnails');
   // メニューをサポート
   register_nav_menus([
-    'global_nave' => 'グローバルナビゲーション'
+    'global_nav' => 'グローバルナビゲーション'
   ]);
 });
 /* アイキャッチ画像がなければ、標準画像を取得する */
