@@ -17,7 +17,7 @@
       <?php foreach ($menu_items as $item) : ?>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a>
+            <a class="nav-link" href="<?php echo esc_attr($item->url); ?>"><?php echo esc_html($item->title); ?></a>
           </li>
         <?php endforeach; ?>
         </ul>
