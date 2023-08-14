@@ -15,5 +15,7 @@ Thumbs.db
 !/wp-content/themes
 /wp-content/themes/*
 !/wp-content/themes/cleanblog
+!/wp-content/themes/underscores
 /wp-content/themes/cleanblog/css/.sass-cache/*
+/wp-content/themes/underscores/css/.sass-cache/*
 /wp-includes/*
