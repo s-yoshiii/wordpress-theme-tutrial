@@ -20,7 +20,8 @@ add_action('init', function () {
 		'public' => true,
 		'menu_position' => 10,
 		'supports' =>  ['title', 'thumbnail', 'editor'],
-		'menu_icon' => 'dashicons-store'
+		'menu_icon' => 'dashicons-store',
+		'has_archive' => true
 	]);
 });
 
