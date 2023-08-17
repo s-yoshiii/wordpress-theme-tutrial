@@ -19,9 +19,10 @@ add_action('init', function () {
 		'label' => '商品',
 		'public' => true,
 		'menu_position' => 10,
-		'supports' =>  ['title', 'thumbnail', 'editor'],
+		'supports' =>  ['title', 'thumbnail', 'editor', 'page-attributes'],
 		'menu_icon' => 'dashicons-store',
-		'has_archive' => true
+		'has_archive' => true,
+		'hierarchical' => true
 	]);
 });
 
