@@ -22,7 +22,8 @@ add_action('init', function () {
 		'supports' =>  ['title', 'thumbnail', 'editor', 'page-attributes'],
 		'menu_icon' => 'dashicons-store',
 		'has_archive' => true,
-		'hierarchical' => true
+		'hierarchical' => true,
+		'show_in_rest' => true
 	]);
 });
 
