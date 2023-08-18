@@ -23,8 +23,17 @@ add_action('init', function () {
 		'menu_icon' => 'dashicons-store',
 		'has_archive' => true,
 		'hierarchical' => true,
-		'show_in_rest' => true
+		'show_in_rest' => true,
 	]);
+	register_taxonomy(
+		'genre',
+		'item',
+		array(
+			'label' => '商品ジャンル',
+			'hierarchical' => true,
+			'show_in_rest' => true,
+		)
+	);
 });
 
 /**
