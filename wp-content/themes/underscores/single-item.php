@@ -18,6 +18,14 @@ get_header();
 		the_post();
 	?>
 		<h1>商品詳細</h1>
+		<?php $terms = get_the_terms(get_the_ID(), 'genre'); ?>
+		<?php if ($terms) : ?>
+			<ul>
+				<?php foreach ($terms as $term) : ?>
+					<li><a href="<?php echo get_term_link($term); ?>"><?php echo esc_html($term->name); ?></a></li>
+				<?php endforeach; ?>
+			</ul>
+		<?php endif; ?>
 		<p>
 			<?php the_title(); ?>
 		</p>
