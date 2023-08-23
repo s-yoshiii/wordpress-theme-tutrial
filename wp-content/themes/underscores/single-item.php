@@ -28,6 +28,11 @@ get_header();
 		<?php endif; ?>
 		<p>
 			<?php the_title(); ?>
+			<?php $price = get_post_meta(get_the_ID(), '価格'); ?>
+		<dl>
+			<dt>価格</dt>
+			<dt><?php price(); ?></dt>
+		</dl>
 		</p>
 	<?php
 		get_template_part('template-parts/content', get_post_type());
