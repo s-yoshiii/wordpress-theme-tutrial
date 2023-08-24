@@ -28,10 +28,17 @@ get_header();
 		<?php endif; ?>
 		<p>
 			<?php the_title(); ?>
-			<?php $price = get_post_meta(get_the_ID(), '価格'); ?>
+			<?php $price = get_post_meta(get_the_ID(), '価格', true); ?>
+			<?php $publisher = get_post_meta(get_the_ID(), '出版社', true); ?>
 		<dl>
-			<dt>価格</dt>
-			<dt><?php price(); ?></dt>
+			<?php if ($price !== '') : ?>
+				<dt>価格</dt>
+				<dt><?php echo esc_html(number_format($price)); ?></dt>
+			<?php endif; ?>
+			<?php if ($publisher !== '') : ?>
+				<dt>出版社</dt>
+				<dt><?php echo esc_html($publisher); ?></dt>
+			<?php endif; ?>
 		</dl>
 		</p>
 	<?php
