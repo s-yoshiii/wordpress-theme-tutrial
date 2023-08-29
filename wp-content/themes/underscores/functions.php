@@ -14,6 +14,9 @@ if (!defined('_S_VERSION')) {
 	define('_S_VERSION', '1.0.0');
 }
 
+add_shortcode('date', function () {
+	return date('Y年 n月 j日');
+});
 add_action('init', function () {
 	register_post_type('item', [
 		'label' => '商品',
